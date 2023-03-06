@@ -1,0 +1,123 @@
+.body-container{
+    -webkit-box-shadow: -10px 0px 33px -7px #a49595, 10px 0px 33px -7px #a49595, 5px 5px 15px 5px rgba(0,0,0,0); 
+    box-shadow: -10px 0px 33px -7px #a49595, 10px 0px 33px -7px #a49595, 5px 5px 15px 5px rgba(0,0,0,0);}
+header {padding-right: 3vw;}
+    h2 {text-align: right}
+main, main a{background-color: rgb(236, 209, 77);
+color: #111118;
+text-decoration: none;
+font-size: 1.5vw;}
+aside {display: grid;
+    justify-items: center;
+    align-items: center;
+background-color: rgb(11, 33, 15);
+color: #f7ebbb}
+.aside-photo img {width: 100%;
+border-radius: 50%;}
+.contacts {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+.contacts a{
+    text-decoration: none;
+    color: #f7ebbb;
+
+}
+.about-description{
+    text-align: justify;
+}
+.icon{width: 3vw; margin-right: 15px;}
+.contacts p{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;}
+.tech-skills{display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: left;}
+.body-container a:hover{cursor: pointer;}
+
+@media screen and (min-width: 768px){
+    .body-container {
+      
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, auto);
+        grid-template-areas: 
+        "header header header "
+        "aside main main "
+        "footer footer footer";
+        max-width: 80%;
+        width: fit-content;
+        min-width: 80%;
+    margin: 10vw auto;
+}
+    
+    header {
+        grid-area: header;
+    }
+    main {
+        grid-area: main;
+        padding: 5vw;
+    }
+    aside {
+        display: grid;
+        grid-row: 2;
+        grid-template-rows: repeat(3, max-content);
+        grid-area: aside;
+        padding-top: 5vw;
+        padding-bottom: 5vw;
+       
+        font-size: 1.5vw;
+    }
+    .aside-photo{width: 15vw}
+    .contacts {
+        width: 80%;
+    margin: 0 auto;}
+    .contacts p{margin: 0.2vw;}
+    .tech-skills{
+        margin-top: 3vw;
+        width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    }
+    .tech-skills ul li {
+        margin: 0.2vw;
+    }
+    footer {
+        grid-area: footer;
+    }
+}
+@media screen and (max-width: 767px){
+    .body-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(4, auto);
+        grid-template-areas: 
+        "header "
+        "aside"
+        " main "
+        "footer ";
+        max-width: 100%;
+        width: fit-content;
+    margin: 10vw auto;
+}
+    header {
+        grid-area: header;
+    }
+    main {
+        grid-area: main;
+        padding: 10vw;
+        font-size: 2.5vw;
+}
+    aside {
+        grid-area: aside;
+        padding: 25vw;
+        font-size: 2.5vw;
+    }
+    .aside-photo{width: 45vw}
+    .icon{width: 8vw;}
+}
